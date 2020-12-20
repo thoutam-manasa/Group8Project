@@ -1,0 +1,136 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Test login with valid credentials",
+        "description": "",
+        "id": "test-qualitypointtech-empdetails-scenario;test-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20251452600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open chrome and start application",
+            "match": {
+              "location": "QualityPointTechTest.open_chrome_and_start_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5836767900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Entering Username,Password and Click on Login button",
+            "match": {
+              "location": "QualityPointTechTest.entering_Username_Password_and_Click_on_Login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 496961100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user should be able to login",
+            "match": {
+              "location": "QualityPointTechTest.user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2298025300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks on Employee Details Button",
+            "match": {
+              "location": "QualityPointTechTest.user_clicks_on_Employee_Details_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1706877000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on edit option",
+            "match": {
+              "location": "QualityPointTechTest.user_clicks_on_edit_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 915700300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user update mail id",
+            "match": {
+              "location": "QualityPointTechTest.user_update_mail_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2715573600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on update employee details",
+            "match": {
+              "location": "QualityPointTechTest.user_clicks_on_update_employee_details()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2386822600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on logout",
+            "match": {
+              "location": "QualityPointTechTest.user_clicks_on_logout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5701571400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "application should be closed",
+            "match": {
+              "location": "QualityPointTechTest.application_should_be_closed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC_01"
+          }
+        ]
+      }
+    ],
+    "name": "Test QualityPointTech empdetails scenario",
+    "description": "",
+    "id": "test-qualitypointtech-empdetails-scenario",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/features/employeedetails.feature",
+    "tags": []
+  }
+]
