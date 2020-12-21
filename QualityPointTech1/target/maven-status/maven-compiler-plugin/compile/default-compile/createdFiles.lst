@@ -1,4 +1,3 @@
-base\Logs.class
 base\DriverWait.class
 base\LaunchBrowser.class
 base\Screenshot.class

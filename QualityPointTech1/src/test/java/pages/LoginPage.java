@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import base.DriverWait;
-import base.Logs;
+
 import utilities.ExcelRead;
 
 
@@ -15,7 +15,7 @@ public class LoginPage {
 	WebDriver driver;
 	ExcelRead excel=new ExcelRead();
 	DriverWait driverWait;
-	Logs log;
+	//Logs log;
 //	RandomStringGenerator randomEmailGenerator;
 	String[][] test1=new String[1][1];
 	
@@ -27,7 +27,7 @@ public LoginPage(WebDriver driver) throws TimeoutException
 	{
 		this.driver=driver;
 		driverWait=new DriverWait(driver);
-		log=new Logs(driver);
+		//log=new Logs(driver);
 	}
 	
 //Entering username
@@ -40,7 +40,7 @@ public void enterUserName()
 			a.sendKeys(userName1);
 			
 			System.out.println("UserName is entered");
-			log.update("******UserName is entered*****");
+			//log.update("******UserName is entered*****");
 	}
 //Entering password
 public void enterPassword()        
@@ -52,7 +52,7 @@ public void enterPassword()
 			a.sendKeys(password1);
 			
 			System.out.println("Password is entered");
-			log.update("******Password is entered*****");
+			//log.update("******Password is entered*****");
 	}
 //Clicking on login button
 public void clickOnLoginButton()        
@@ -61,6 +61,6 @@ public void clickOnLoginButton()
 			a.click();
 			
 			System.out.println("Login is clicked");
-			log.update("******Login is clicked*****");
+			//log.update("******Login is clicked*****");
 	}
 }

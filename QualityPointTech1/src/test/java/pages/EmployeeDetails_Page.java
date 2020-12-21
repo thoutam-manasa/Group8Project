@@ -11,13 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeoutException;
 
 import base.DriverWait;
-import base.Logs;
+//import base.Logs;
 import utilities.ExcelRead;
 
 
 public class EmployeeDetails_Page {
 		WebDriver driver;
-		Logs log;
+		//Logs log;
 		DriverWait driverWait;
 
 		By btnEmpdetails = By.linkText("Employee Details");
@@ -45,7 +45,7 @@ public class EmployeeDetails_Page {
 		public  EmployeeDetails_Page(WebDriver driver) throws TimeoutException{
 			this.driver=driver;
 			driverWait=new DriverWait(driver);
-			log=new Logs(driver);
+			//log=new Logs(driver);
 		}
 		
 		//clicking on employee details
@@ -55,7 +55,7 @@ public class EmployeeDetails_Page {
 				empdetails.click();
 			
 				System.out.println("Employee Details is clicked");
-				log.update("******Employee Details is clicked******");
+				//log.update("******Employee Details is clicked******");
 			}
 		
 		//clicking on edit employee details
@@ -64,7 +64,7 @@ public class EmployeeDetails_Page {
 		edit.click();
 	
 		System.out.println("Edit button is clicked");
-		log.update("******Edit button is clicked******");
+		//log.update("******Edit button is clicked******");
 		}
 		
 		// edit new email id 
@@ -74,7 +74,7 @@ public class EmployeeDetails_Page {
 			email.sendKeys("abc@gmail.com");
 		//	((WebElement) txtEmail).clear();
 			System.out.println("Email Id is edited");
-			log.update("******Email Id is edited******");
+			//log.update("******Email Id is edited******");
 			
 		}
 		
@@ -84,7 +84,7 @@ public class EmployeeDetails_Page {
 			updateEmp.click();
 		
 			System.out.println("Employee Details(Email) is update");
-			log.update("******Employee Details(Email) is updated******");
+			//log.update("******Employee Details(Email) is updated******");
 			}
 		
 		//clicking on logout button
@@ -93,7 +93,7 @@ public class EmployeeDetails_Page {
 			logout.click();
 		
 			System.out.println("logout sucessful");
-			log.update("******logout sucessful******");
+			//log.update("******logout sucessful******");
 			}
 //		public void clickonEmployeeDetails()
 //		{

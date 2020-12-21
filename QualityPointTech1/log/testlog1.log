@@ -1,0 +1,9 @@
+2020-12-21 20:38:55,445 [main] INFO stepdefinitions - Chrome Driver Opened
+2020-12-21 20:38:55,472 [main] INFO stepdefinitions - Navigated to URL
+2020-12-21 20:39:00,899 [main] INFO stepdefinitions - Credentials entered
+2020-12-21 20:39:01,429 [main] INFO stepdefinitions - login successfull
+2020-12-21 20:39:03,958 [main] INFO stepdefinitions - clicked on employee details button
+2020-12-21 20:39:06,849 [main] INFO stepdefinitions - username entered
+2020-12-21 20:39:07,840 [main] INFO stepdefinitions - updated email address
+2020-12-21 20:39:11,482 [main] INFO stepdefinitions - employee details updated
+2020-12-21 20:39:13,847 [main] INFO stepdefinitions - logout sucessful

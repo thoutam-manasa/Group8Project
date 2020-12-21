@@ -3,15 +3,19 @@ package stepdefinitions;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import org.openqa.selenium.support.PageFactory;
 
-//import com.relevantcodes.extentreports.ExtentReports;
-//import com.relevantcodes.extentreports.ExtentTest;
-//import com.relevantcodes.extentreports.LogStatus;
 import cucumber.api.java.en.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -36,19 +40,23 @@ public class QualityPointTechTest extends ExcelRead{
 	/**
 	 * method to get extentreports
 	 */
-//	public static ExtentReports report = new ExtentReports("./Reports/ExtentReport.html");
-//	ExtentTest test = report.startTest("QualityPointTech");
+public static ExtentReports report = new ExtentReports("./Reports/ExtentReport.html");
+ExtentTest test = report.startTest("QualityPointTech");
 	
 	//Screenshot ob=new Screenshot(driver);	
 	
-	//Logger logger;
+	Logger logger;
 	
 @Given("^Open chrome and start application$")
 public void open_chrome_and_start_application() throws Throwable {
 	System.out.println("1"); 
     read();
+    logger =Logger.getLogger("stepdefinitions");
+    PropertyConfigurator.configure("Log4j.properties");
 	driver=LaunchBrowser.Launch_Browser("url");
 	System.out.println("2"); 
+	logger.info("Chrome Driver Opened");
+	logger.info("Navigated to URL");
 	sc=new Screenshot(driver);
 	
 }
@@ -65,6 +73,8 @@ public void entering_Username_Password_and_Click_on_Login_button() throws Throwa
     sc.getScreenshot(driver);
     login.clickOnLoginButton();
     System.out.println("3"); 
+    logger.info("Credentials entered");
+    test.log(LogStatus.PASS, "Authentication sucessfully");	
 //    
 //	login.enterUserName();
 //    login.enterPassword();
@@ -84,7 +94,7 @@ public void user_should_be_able_to_login() throws Throwable {
 	System.out.println(driver.getCurrentUrl());
 	System.out.println("login sucessfull"); 
 	sc.getScreenshot(driver);
-	//logger.info("login sucessful");
+	logger.info("login successfull");
 }
 @When("^user clicks on Employee Details Button$")
 public void user_clicks_on_Employee_Details_Button() throws Throwable {
@@ -92,7 +102,7 @@ public void user_clicks_on_Employee_Details_Button() throws Throwable {
 	emp.clickOnEmployeeDetails();
 //	emp=PageFactory.initElements(driver, EmployeeDetailsPageWithPageFactory.class);
 	//emp.clickonEmployeeDetails();
-//	logger.info("clicked on employee details button");
+	logger.info("clicked on employee details button");
 	Assert.assertEquals("http://qualitypointtech.net/timesheetdemo/edit_employee.php", driver.getCurrentUrl());
 		System.out.println(driver.getCurrentUrl());
 	System.out.println("edit emp details page is displayed"); 
@@ -105,7 +115,7 @@ public void user_clicks_on_edit_option() throws Throwable {
 	
 	System.out.println(" edit emp details page is displayed"); 
 	sc.getScreenshot(driver);
-//	logger.info("username entered");
+	logger.info("username entered");
 }
 
 @And("^user update mail id$")
@@ -113,9 +123,7 @@ public void user_update_mail_id() throws Throwable {
 	emp = new EmployeeDetails_Page(driver);
 	emp.editEmailId(" ");
 	emp.editEmailId("abc@gmail.com");
-	//emp.typeEmailid(" ");
-	//emp.typeEmailid("abc@gmail.com");
-//	logger.info("updated email address");
+	logger.info("updated email address");
 	sc.getScreenshot(driver);
 	
 }
@@ -126,7 +134,7 @@ public void user_clicks_on_update_employee_details() throws Throwable {
 	emp.clickonUpdateEmp();
 	System.out.println(" Employee Details updated Successfully"); 
 	sc.getScreenshot(driver);
-//	logger.info("employee details updated");
+	logger.info("employee details updated");
 }
 
 @And("^user clicks on logout$")
@@ -135,7 +143,7 @@ public void user_clicks_on_logout() throws Throwable {
 	emp.clickonLogout();
 	System.out.println(" logout successfully");
 	sc.getScreenshot(driver);
-//	logger.info("logout sucessful");
+	logger.info("logout sucessful");
 }
 
 
@@ -144,8 +152,8 @@ public void user_clicks_on_logout() throws Throwable {
 public void application_should_be_closed() throws Throwable {
 	TimeUnit.SECONDS.sleep(5);
 	driver.quit();
-//	report.endTest(test);
-//	report.flush();
+	report.endTest(test);
+	report.flush();
 }
 
 

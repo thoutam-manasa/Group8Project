@@ -10,12 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DriverWait {
 	WebDriver driver;
 	WebElement webElement;
-	Logs log;
+	//Logs log;
 //constructor for driver
 public DriverWait(WebDriver driver)
 	{
 		this.driver=driver;
-		log =new Logs(driver);
+		//log =new Logs(driver);
 	}
 //webdriverwait for element to be clickable
 public WebElement clickable(By locator,int timeout)
@@ -28,12 +28,12 @@ public WebElement clickable(By locator,int timeout)
 	catch(WebDriverException e)
 	{
 		e.printStackTrace();
-		log.update("Exception in WaitForElement method");
+		//log.update("Exception in WaitForElement method");
 	}
 	catch(IncompatibleClassChangeError e)
 	{
 		e.printStackTrace();
-		log.update("Exception in incompatile class change error method");
+		//log.update("Exception in incompatile class change error method");
 	}
 		return webElement;
 	}
@@ -48,12 +48,12 @@ public WebElement visibility(By locator,int timeout)
 	catch(WebDriverException e)
 	{
 		e.printStackTrace();
-		log.update("Exception in WaitForElement method");
+		//log.update("Exception in WaitForElement method");
 	}
 	catch(IncompatibleClassChangeError e)
 	{
 		e.printStackTrace();
-		log.update("Exception in incompatile class change error method");
+		//log.update("Exception in incompatile class change error method");
 	}
 		return webElement;
 	}

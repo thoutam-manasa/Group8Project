@@ -11,11 +11,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 
-import base.Logs;
+//import base.Logs;
 
 public class ExcelRead {
 	static WebDriver driver;
-	static Logs log=new Logs(driver);
+	//static Logs log=new Logs(driver);
 	public String[][] testdata= new String[1][2];
 	int row,column,i,j;
 //method to read data from excel
@@ -41,17 +41,17 @@ public String[][] read()
 		catch (FileNotFoundException e) 
 		{
 			System.out.println("FileNotFound exception occured");
-			log.update("FileNotFound exception occured");
+			//log.update("FileNotFound exception occured");
 		}
 		catch (IOException e1) 
 		{
 			System.out.println("IO exception occured");
-			log.update("IO exception occured");
+			//log.update("IO exception occured");
 		}
 		catch(IncompatibleClassChangeError e)
 		{
 			System.out.println("IncompatibleClassChangeError exception occured");
-			log.update("IncompatibleClassChangeError exception occured");
+			//log.update("IncompatibleClassChangeError exception occured");
 		}
 		return testdata;
 	}

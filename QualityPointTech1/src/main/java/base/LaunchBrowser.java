@@ -24,7 +24,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class LaunchBrowser {
 	static WebDriver driver;
-	static Logs log=new Logs(driver);
+	//static Logs log=new Logs(driver);
 	static String path1="drivers/chromedriver.exe";
 	static String path2="drivers/geckodriver.exe";
 	static String path3="drivers/msedgedriver.exe";
@@ -54,7 +54,7 @@ public class LaunchBrowser {
      		chromeOptions.addArguments("--disable-notifications");
      		driver=new ChromeDriver(chromeOptions);
      		System.out.println("Chrome browser is launched");
-     		log.update("******Chrome browser Successfully Launched******");
+     		//log.update("******Chrome browser Successfully Launched******");
              break;
          case "LOCAL_FIREFOX":
         	 System.setProperty("webdriver.gecko.driver",path2);
@@ -62,7 +62,7 @@ public class LaunchBrowser {
      		firefoxOptions.addPreference("dom.webnotifications.enabled","false");
      		driver=new FirefoxDriver(firefoxOptions);
      		System.out.println("Firefox browser is launched");
-     		log.update("******Firefox  browser Successfully Launched******");
+     		//log.update("******Firefox  browser Successfully Launched******");
              break;
          case "GRID_CHROME":
              DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();

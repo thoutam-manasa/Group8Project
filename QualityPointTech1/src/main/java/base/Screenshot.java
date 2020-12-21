@@ -15,11 +15,11 @@ import org.openqa.selenium.WebDriver;
  */
 public class Screenshot {
 	WebDriver driver;
-	Logs log;
+	//Logs log;
 	
 public Screenshot(WebDriver driver) {
 		this.driver=driver;
-		log=new Logs(driver);
+		//log=new Logs(driver);
 	}
 	/**
 	 * method  to capture screenshot
